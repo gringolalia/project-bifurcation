@@ -1,0 +1,17 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "outDir": "../out-tsc/app",
+    /* 
+      Lazy loading of modules giving error
+      https://github.com/angular/angular-cli/issues/8641#issuecomment-423330870
+    */
+    "baseUrl": "./", 
+    "module": "es2015",
+    "types": []
+  },
+  "exclude": [
+    "test.ts",
+    "**/*.spec.ts"
+  ]
+}

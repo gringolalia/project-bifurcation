@@ -1,0 +1,67 @@
+<mat-sidenav-container class="sidenav-container">
+
+  <mat-sidenav #sidenav 
+      class="sidenav"
+      [mode]="mobileQuery.matches ? 'over' : 'side'" 
+      [opened]="mobileQuery.matches ? false : true" 
+      [fixedInViewport]="mobileQuery.matches" 
+      [fixedTopGap]="56">
+    
+    <!-- Left menu list -->
+    <mat-nav-list class="nav-list">
+
+      <!-- show app name in mobile view only -->
+      <ng-container *ngIf="mobileQuery.matches">
+        <div class="app-logo">
+          <mat-icon>blur_on</mat-icon>
+          <h1>{{ appName }}</h1>
+        </div>
+        <mat-divider></mat-divider>
+      </ng-container>
+
+      <!-- links -->
+      <div>
+        <a mat-list-item routerLink="/home" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}" (click)="closeSideNav()" >
+          <mat-icon>home</mat-icon>
+          <span>Home</span>
+        </a>
+        <a mat-list-item routerLink="/orders" routerLinkActive="active-link" (click)="closeSideNav()" >
+          <mat-icon>assessment</mat-icon>
+          <span>Orders</span>
+        </a>
+        <a mat-list-item routerLink="/customers" routerLinkActive="active-link" (click)="closeSideNav()" >
+          <mat-icon>assessment</mat-icon>
+          <span>Customers</span>
+        </a>
+  
+        <mat-divider></mat-divider>
+        
+        <a mat-list-item routerLink="/settings" routerLinkActive="active-link" (click)="closeSideNav()" >
+          <mat-icon>settings</mat-icon>
+          <span>Settings</span>
+        </a>
+        <a mat-list-item routerLink="/help" routerLinkActive="active-link" (click)="closeSideNav()" >
+          <mat-icon>help</mat-icon>
+          <span>Help</span>
+        </a>
+        <a mat-list-item routerLink="/feedback" routerLinkActive="active-link" (click)="closeSideNav()" >
+          <mat-icon>feedback</mat-icon>
+          <span>Send feedback</span>
+        </a>
+  
+        <mat-divider></mat-divider>
+      </div>
+
+      <!-- copyright -->
+      <span class="copyright">© 2018 Sunwer LLP</span>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <!-- Outlet container -->
+  <mat-sidenav-content>
+    <div class="outlet-container">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+
+</mat-sidenav-container>

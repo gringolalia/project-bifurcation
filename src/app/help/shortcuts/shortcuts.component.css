@@ -1,0 +1,22 @@
+.container {
+    max-width: 500px;
+}
+
+.mat-form-field {
+    width: 100%;
+}
+
+table {
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+table th {
+    font-weight: bold;
+    color: black;
+    text-transform: uppercase;
+}
+
+table th:nth-child(1) {
+    width: 60%;
+}

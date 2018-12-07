@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.sidenav-container {
+  height: 100%;
+}
+@media screen and (min-width: 600px) {
+  .sidenav-container {
+    display: flex;
+  }
+}
+
+.mat-progress-bar {
+  position: absolute;
+  z-index: 999;
+}

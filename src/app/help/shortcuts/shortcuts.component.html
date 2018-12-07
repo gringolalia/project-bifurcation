@@ -1,0 +1,60 @@
+<div class="container">
+    <div class="page-header-row">
+      <a routerLink="/help">
+        <mat-icon>arrow_back_ios</mat-icon>
+        <span>Back</span>
+      </a>
+      <h1>Shortcuts</h1>
+    </div>
+    
+    <!-- SHORTCUTS TABLES -->
+    <div class="shortcuts">
+      
+      <!-- ACTIONS TABLE -->
+      <table mat-table [dataSource]="actions_dataSource">
+      
+        <!-- Command Column -->
+        <ng-container matColumnDef="command">
+          <th mat-header-cell *matHeaderCellDef>Actions</th>
+          <td mat-cell *matCellDef="let element">
+            {{element.command}}
+          </td>
+        </ng-container>
+      
+        <!-- Keybinding Column -->
+        <ng-container matColumnDef="keybinding">
+          <th mat-header-cell *matHeaderCellDef></th>
+          <td mat-cell *matCellDef="let element">
+            <span class="custom-text-grey-round-container">{{element.keybinding}}</span>
+          </td>
+        </ng-container>
+      
+        <tr mat-header-row *matHeaderRowDef="actions_columns"></tr>
+        <tr mat-row *matRowDef="let row; columns: actions_columns;"></tr>
+      </table>
+
+      <!-- NAVIGATION TABLE -->
+      <table mat-table [dataSource]="navigation_dataSource">
+      
+          <!-- Command Column -->
+          <ng-container matColumnDef="command">
+            <th mat-header-cell *matHeaderCellDef>Navigation</th>
+            <td mat-cell *matCellDef="let element">
+              {{element.command}}
+            </td>
+          </ng-container>
+        
+          <!-- Keybinding Column -->
+          <ng-container matColumnDef="keybinding">
+            <th mat-header-cell *matHeaderCellDef></th>
+            <td mat-cell *matCellDef="let element">
+              <span class="custom-text-grey-round-container">{{element.keybinding}}</span>
+            </td>
+          </ng-container>
+        
+          <tr mat-header-row *matHeaderRowDef="navigation_columns"></tr>
+          <tr mat-row *matRowDef="let row; columns: navigation_columns;"></tr>
+      </table>
+
+    </div>
+</div>

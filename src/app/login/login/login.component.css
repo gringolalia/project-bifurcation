@@ -1,0 +1,19 @@
+.container {
+    max-width: 300px;
+    padding: 40px;
+    margin: 0 auto;
+    margin-top: 6%;
+}
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+.login-container > * {
+    width: 100%;
+}
+
+.error-text {
+    color: red;
+}
