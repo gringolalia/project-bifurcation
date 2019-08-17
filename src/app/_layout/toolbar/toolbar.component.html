@@ -7,7 +7,7 @@
   <ng-container *ngIf="!mobileQuery.matches">
     <div class="app-logo">
       <mat-icon>blur_on</mat-icon>
-      <h1>{{ appName }}</h1>
+      <h1>Engenho Novo NG2</h1>
     </div>
   </ng-container>
 
@@ -24,11 +24,11 @@
   <!-- Account button -->
   <ng-container *ngIf="!mobileQuery.matches">
     <a routerLink="/help/shortcuts" mat-icon-button matTooltip="Keyboard Shortcuts">
-      <mat-icon>keyboard</mat-icon>
+      <mat-icon class="fas fa-sun fa-2x"></mat-icon>
     </a>
   </ng-container>
   <button mat-icon-button [matMenuTriggerFor]="account" matTooltip="Account menu">
-    <mat-icon>account_circle</mat-icon>
+    <mat-icon class="fas fa-chess-rook fa-2x"></mat-icon>
   </button>
 
   <!-- Account menu -->
@@ -54,7 +54,7 @@
     </a>
 
     <mat-divider></mat-divider>
-    
+
     <a mat-menu-item class="menu-item" routerLink="/logout">
       <mat-icon>exit_to_app</mat-icon>
       <span>Logout</span>

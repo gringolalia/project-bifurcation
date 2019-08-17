@@ -1,8 +1,21 @@
-@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import "~@angular/material/prebuilt-themes/pink-bluegrey.css";
 @import "./assets/css/bootstrap/bootstrap-grid-system.min.css";
+@import url('https://fonts.googleapis.com/css?family=News+Cycle');
 
-* {
-    font-family: 'Roboto', sans-serif;
+@import '~@angular/material/theming';
+
+$custom-typography: mat-typography-config($font-family: '"News Cycle", sans-serif;');
+@include mat-core($custom-typography);
+
+$custom-primary: mat-palette($mat-blue-grey);
+$custom-accent: mat-palette($mat-yellow, 100);
+$custom-theme: mat-light-theme($custom-primary, $custom-accent);
+@include angular-material-theme($custom-theme);
+
+
+body, html {
+    font-family: 'News Cycle', sans-serif !important;
+    font-weight: 300 !important;
 }
 
 html, body {
@@ -38,11 +51,6 @@ html, body {
     background-color: rgba(0, 0, 0, 0.1);
 }
 
-/*
-    Styling icons in material design
-    http://google.github.io/material-design-icons/#icon-font-for-the-web
-*/
-/* Rules for sizing the icon. */
 .material-icons.md-18 { font-size: 18px; }
 .material-icons.md-24 { font-size: 24px; }
 .material-icons.md-36 { font-size: 36px; }

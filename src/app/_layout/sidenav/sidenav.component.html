@@ -1,12 +1,12 @@
 <mat-sidenav-container class="sidenav-container">
 
-  <mat-sidenav #sidenav 
+  <mat-sidenav #sidenav
       class="sidenav"
-      [mode]="mobileQuery.matches ? 'over' : 'side'" 
-      [opened]="mobileQuery.matches ? false : true" 
-      [fixedInViewport]="mobileQuery.matches" 
+      [mode]="mobileQuery.matches ? 'over' : 'side'"
+      [opened]="mobileQuery.matches ? false : true"
+      [fixedInViewport]="mobileQuery.matches"
       [fixedTopGap]="56">
-    
+
     <!-- Left menu list -->
     <mat-nav-list class="nav-list">
 
@@ -14,7 +14,7 @@
       <ng-container *ngIf="mobileQuery.matches">
         <div class="app-logo">
           <mat-icon>blur_on</mat-icon>
-          <h1>{{ appName }}</h1>
+          <h3>Engenho Novo NG2</h3>
         </div>
         <mat-divider></mat-divider>
       </ng-container>
@@ -22,38 +22,40 @@
       <!-- links -->
       <div>
         <a mat-list-item routerLink="/home" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}" (click)="closeSideNav()" >
-          <mat-icon>home</mat-icon>
-          <span>Home</span>
+          <mat-icon>all_inclusive </mat-icon>
+          <span>In Media Res</span>
         </a>
         <a mat-list-item routerLink="/orders" routerLinkActive="active-link" (click)="closeSideNav()" >
-          <mat-icon>assessment</mat-icon>
-          <span>Orders</span>
+          <mat-icon>my_location</mat-icon>
+          <span>In Principio</span>
         </a>
         <a mat-list-item routerLink="/customers" routerLinkActive="active-link" (click)="closeSideNav()" >
-          <mat-icon>assessment</mat-icon>
-          <span>Customers</span>
+          <mat-icon>free_breakfast</mat-icon>
+          <span>Freguesia</span>
         </a>
-  
+
         <mat-divider></mat-divider>
-        
+
         <a mat-list-item routerLink="/settings" routerLinkActive="active-link" (click)="closeSideNav()" >
-          <mat-icon>settings</mat-icon>
-          <span>Settings</span>
+          <mat-icon>directions_bike</mat-icon>
+          <span>Rio de Dinheiro</span>
         </a>
         <a mat-list-item routerLink="/help" routerLinkActive="active-link" (click)="closeSideNav()" >
-          <mat-icon>help</mat-icon>
-          <span>Help</span>
+          <mat-icon>flight</mat-icon>
+          <span>João Pessoa</span>
         </a>
         <a mat-list-item routerLink="/feedback" routerLinkActive="active-link" (click)="closeSideNav()" >
-          <mat-icon>feedback</mat-icon>
-          <span>Send feedback</span>
+          <mat-icon>local_bar</mat-icon>
+          <span>San Pavlov City</span>
         </a>
-  
+
         <mat-divider></mat-divider>
       </div>
 
       <!-- copyright -->
-      <span class="copyright">© 2018 Sunwer LLP</span>
+      <span class="copyright">
+        <mat-icon>waves</mat-icon>
+        &nbsp;Clonado na Samboja 2019</span>
     </mat-nav-list>
   </mat-sidenav>
 
