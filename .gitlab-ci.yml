@@ -1,0 +1,15 @@
+image: alpine:latest
+pages:
+  stage: deploy
+  script:
+script:
+  - npm install -g @angular/cli@6.2.1
+  - npm install
+  - ng build
+  - mv dist/fossilizer/* public/
+  - echo 'Now I wanna sniff some glue'
+  artifacts:
+    paths:
+    - public
+  only:
+  - master
